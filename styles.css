@@ -1,0 +1,348 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme variables */
+:root {
+    /* Light theme (default) */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007bff;
+    --secondary-bg: #EBEBEB;
+    --project-bg: #3A6EA5;
+    --project-text: #ffffff;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-color: #333333; /* Changed to black for dark mode */
+    --text-color: #ffffff; /* Changed to white for dark mode */
+    --primary-color: #4da6ff;
+    --secondary-bg: #333333; /* Darker background for sections */
+    --project-bg: #1a1a1a; /* Darker background for projects */
+    --project-text: #ffffff;
+}
+
+/* Apply theme colors */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation styles */
+nav {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FF6700; /* Keeping the logo color consistent in both themes */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 3rem;
+}
+
+/* Button styles */
+.say-hello-btn {
+    background-color: #004E98;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 3rem;
+    margin-left: 20px;
+    text-decoration:none;
+}
+
+.say-hello-btn:hover {
+    background-color: #3A6EA5;
+}
+
+/* Header styles */
+header {
+    background-color: #3A6EA5;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-image img {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+/* About section styles */
+#about {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-color); /* Use theme text color */
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FF6700; /* Keeping the heading color consistent */
+}
+
+#about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Section styles */
+section {
+    padding: 3rem 1rem;
+    margin: 1rem 0;
+    
+    border-radius: 8px;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 30px; }
+h3 { font-size: 20px; }
+
+/* Skills section styles */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-column {
+    flex: 1;
+    
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.skills-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FF6700;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skill {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+ul{
+list-style: none; 
+padding-left: 0; 
+color:black;
+}
+
+/* Projects section styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project {
+    background-color: var(--project-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    color: var(--project-text);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: var(--project-text);
+    margin-bottom: 0.5rem;
+}
+
+/* Social icons styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FF6700;
+}
+
+/* Footer styles */
+footer {
+    background-color: #004E98;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Typewriter effect styles */
+.typewriter-container {
+    display: block;
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.typewriter {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: pre;
+    display: inline-block;
+    position: relative;
+}
+
+.typewriter::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    color: #FF6700;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #FF6700;
+    margin-right: 10px;
+}
+
+.back-btn {
+            
+            background-color: #004E98;
+            color: #fff;
+           padding: 0.5rem 1rem;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+           margin-right: 3rem;
+           margin-left: 20px;
+           text-decoration:none;
+
+        }
+.back-btn:hover {
+    background-color: #3A6EA5;
+}
+
+.contact-info, .contact-form {
+            flex-basis: 48%;
+        }
+
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid var(--text-color);
+            border-radius: 4px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        button[type="submit"] {
+            background-color: #004E98;
+            color: #fff;
+           padding: 0.5rem;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+           text-decoration:none;
+
+        }
+button[type="submit"]:hover {
+    background-color: #3A6EA5;
+}
+
+
+
+
+
+
+/* You can add more specific dark theme overrides here if needed */
+[data-theme="dark"] .skills-column,
+[data-theme="dark"] .skill {
+    background-color: #a1a1a1; /* Slightly lighter than the main background for contrast */
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .project {
+    background-color: #333; /* Darker background for projects in dark mode */
+}
+[data-theme="dark"] .skills-column h3 {
+    color: black;
+}
+
+
+
+/* Add any additional dark theme specific styles here */
